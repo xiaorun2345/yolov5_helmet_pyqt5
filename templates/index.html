@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+	function onImage() {
+		var img = event.srcElement;
+		img.src = "../static/welcome.jpg";
+		img.onerror = null; //控制不要一直跳动
+	}
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI视觉</title>
+</head>
+<body>
+    <!body background="../static/welcome.jpg"
+          style=" background-repeat:no-repeat ;
+          background-size:100% 100%;
+        background-attachment: fixed;">
+      置信度： <input type="text"  name="name"><br>
+      文件名： <input type="text"   name="age"><br>
+     系统信息: <input type="submit" value="系统信息" name="sysytem">
+     头盔检测:  <input type="submit" value="头盔检测" name="hat_detection">
+       <img src="{{ url_for('video_feed') }}" onerror="onImage()">
+       <img src1="{{ url_for('video_feed') }}" >
+
+<p><center>AI视觉监控平台</center></p>
+</body>
+</html>
